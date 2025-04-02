@@ -1,17 +1,21 @@
+{% load static %}
+
 {% if user.is_authenticated %}
    <div class="alert alert-success" role="alert">
        <h3>Welcome {{ user.username }}!</h3>
        <form method="POST" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer;">
-          Logout?
-        </button>
-      </form>
-         </div>
+           {% csrf_token %}
+           <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer;">
+               Logout?
+           </button>
+       </form>
+   </div>
 {% else %}
    <div class="alert alert-success" role="alert">
        <h3>Welcome!</h3>
        <a href="{% url 'register' %}">Signup</a>
        <a href="{% url 'login' %}">Login</a>
+       <br><br>
+       <img src="{% static 'img/check.jpg' %}" alt="Check Image" style="max-width: 300px; display: block; margin: 0 auto;">
    </div>
 {% endif %}
