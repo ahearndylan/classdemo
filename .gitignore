@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environment
+env/
+
+# VS Code or PyCharm settings
+.vscode/
+.idea/
+
+# Django stuff
+db.sqlite3
+*.log
+staticfiles/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Render deploy file (keep if you're using it)
+# !render.yaml
